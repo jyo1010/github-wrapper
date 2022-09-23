@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(10px+ 2vmin);
+  text-align: center;
+  background: linear-gradient(-45deg, #0c0c0c, #d83499, #5e053c,  #880808);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+
+
+}
+.heading{
+  color:rgb(162, 226, 43);
+}
+.formCard{
+  display: flex;
+  flex-direction:column;
+  width:80%;
+}
+.formCard input{
+  background-color:transparent;
+  border:1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  color:white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+
+}
+.formCard button{
+  /* width:300px; */
+  background-color:black;
+  border:rgb(250, 247, 247);
+  border-radius: 5px;
+  padding: 10px;
+  margin :5px;
+  color:white;
+  box-shadow: 0 0 5px rgba(34, 33, 33, 0.2);
+}
+.formCard button:hover{
+  background-color: rgb(162, 226, 43);
+  color:black;
+
+}
+.userDetailCard{
+  display: flex;
+  margin: 10px;
+  margin-top: 30px;
+  padding: 1rem;
+  background: rgb(142, 233, 81);
+  box-shadow: 0 8px 32px 0 rgba(164, 165, 180, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgb(10, 10, 10);
+  border-radius: 10px;
+}
+.userDetailBody{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.userDetailBody p{
+ margin:0;
+ text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.userDetailBody .name{
+  font-size: 1.5rem;
+  font-weight: 600;
 }
+.userDetailBody .follow{
+  display:flex;
+  gap:8px;
+  margin-top: 12px;
+}
+.userImage img{
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0 0 5px rgba(143, 134, 134, 0.2);
+} 
+
+
+
